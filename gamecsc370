@@ -1,6 +1,6 @@
 import java.util.Arrays; //array import
 
-public class Sean //public class sean
+public class Dirsort //public class sean
 {
     public static void sortingD(String [] dir) //String 
     {
@@ -92,4 +92,3 @@ dir[i] = dir [i].substring (1); //substring 1 and i
  }
  
 }
-
