@@ -1,0 +1,95 @@
+import java.util.Arrays; //array import
+
+public class Sean //public class sean
+{
+    public static void sortingD(String [] dir) //String 
+    {
+    
+for(int i = 0; i < dir.length; i++) 
+{
+ int C = -1, //integer C = to -1 
+          
+  P = 0; //integer P = 0
+            
+ while(P >= 0) //while loop with p being greater or equal to zero
+
+ {
+  P++; //adding value to integer C
+                
+  P = dir[i].indexOf ("/", P);
+                
+ if(P != -1) //if P is not equal to negative 1
+     
+ P++;
+                
+ }
+ 
+    dir [i] = Character.toString ((char) C) + dir[i];
+}
+ Arrays.sort(dir);
+        
+for (int i = 0; i < dir.length; i++) //for loop so integer i is equal to 0
+            
+dir[i] = dir [i].substring (1); //substring 1 and i
+
+
+}
+    
+ public static void main(String[] args)
+ {
+     
+     {
+         
+      String [] d = {"/", "/usr/",
+          "/usr/local/",  "/usr/local/bin/", 
+          "/games/", "/games/snake/",  
+          "/homework/", "/temp/downloads/"}; //the requirements
+            sortingD(d);
+            
+            for (int i = 0; i < d.length; i++)
+                
+            System.out.print (d[i]+ "  ");
+            System.out.println ();
+            
+     }
+     
+     {
+            String[]  D = {"/usr/", "/usr/local/", "/bin/", "/usr/local/bin/", "/usr/bin/", "/bin/local/", "/bin/local/"};
+            sortingD(D);
+            
+            for (int i = 0; i < D.length; i++)//for loop i = 0 and i++
+                
+            System.out.print (D[i]+ "  "); //print out the string to the user
+            
+            System.out.println ();
+            
+     }
+     
+     {
+         
+       String[]  D = {"/", "/a/", "/b/", "/c/", "/d/", "/e/", "/f/", "/g/", "/a/a/", "/b/g/c/", "/g/f/"}; //displays te letters a to f
+        sortingD(D);
+        for (int i = 0; i < D.length; i++)
+        System.out.print (D[i]+ "  ");
+        System.out.println ();
+    
+      }
+     
+     {
+         
+      String[] D = {" /a/b/c/d/e/f/g/h/i/j/k/l/m/n/" , "/o/p/q/r/s/t/u/v/w/x/y/z/"}; //including the letters of the alphabet
+            
+    sortingD(D);
+            
+   for (int i = 0; i < D.length; i++)
+                
+      System.out.print (D[i]+ "  ");
+            
+     System.out.println ();
+   
+     }
+     
+ }
+ 
+}
+
